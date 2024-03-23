@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Registration Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    color: blue;
+    text-align: center; 
+  }
+  
+  form {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+<h2>Registration Form</h2>
+<form action="register" method="post">
+<label>Username:</label><br>
+<input type="text" name="username">
+<br><br>
+<label>Email:</label><br>
+<input type="email" name="email">
+<br><br>
+<label>Password:</label><br>
+<input type="password" name="password">
+<br><br>
+<label>Gender:</label><br>
+Male<input type="radio" name="gender" value="male">
+Female<input type="radio" name="gender" value="female">
+Other<input type="radio" name="gender" value="other">
+<br><br>
+<label>Role:</label><br>
+Admin<input type="radio" name="role" value="admin">
+Customer<input type="radio" name="role" value="customer">
+<br><br>
+<label >Address:</label><br>
+<textarea name="address"></textarea>
+<br><br>
+<input type="submit" value="SUBMIT">
+</form>
+</body>
+</html>
